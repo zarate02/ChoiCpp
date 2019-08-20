@@ -118,6 +118,19 @@ int _tmain(int argc, _TCHAR* argv[])
 	int * const pnnnnnData = &aaa;
 
 
+	//r-value 참조 : 이름없는 임시객체 처리 (성능저하)
+
+	//범위기반 for문
+
+	int aList[5] = { 40, 30, 20, 10, 30 };
+
+
+	//형식검사 C++은 강력
+	for (auto ki : aList){
+		printf("%d\n", ki);
+	}
+	
+
 	return 0;
 }
 
